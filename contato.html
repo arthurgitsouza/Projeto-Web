@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entre em contato e envie sua opinião sobre qual carro é melhor: Honda Civic Touring 2017 ou Mitsubishi Lancer Ralliart 4x4. Formulário de opinião.">
+  <meta name="keywords" content="contato, opinião, Honda Civic, Mitsubishi Lancer Ralliart, comparativo de carros">
+  <meta name="author" content="Trabalho Escolar - HTML Puro">
+  <title>Contato e Opinião | Civic Touring 2017 vs Lancer Ralliart</title>
+</head>
+<body>
+
+  <header>
+    <h1>&#128172; Contato &amp; Sua Opinião</h1>
+    <p><strong>Honda Civic Touring 2017</strong> vs <strong>Mitsubishi Lancer Sportback Ralliart 2.0 Turbo 4x4</strong></p>
+    <p><em>Você já tem um favorito? Nos diga qual carro você escolheria e por quê!</em></p>
+  </header>
+
+  <nav>
+    <strong>Menu de Navegação:</strong>
+    <a href="index.html">&#127968; Home</a> |
+    <a href="sobre.html">&#128203; Comparativo Detalhado</a> |
+    <a href="contato.html">&#128172; Contato / Opinião</a>
+  </nav>
+
+  <main>
+
+    <section id="convite">
+      <h2>Participe da Discussão!</h2>
+      <p>
+        Depois de conhecer todos os detalhes do <strong>Honda Civic Touring 2017</strong> e do
+        <strong>Mitsubishi Lancer Sportback Ralliart 2.0 Turbo 4x4</strong>, está na hora de você
+        dar o seu veredito!
+      </p>
+      <p>
+        Seja você um amante da eficiência e tecnologia do Civic, ou um apaixonado pela adrenalina
+        e DNA de rally do Lancer, queremos ouvir sua opinião. Preencha o formulário abaixo com seu
+        nome, e-mail e sua mensagem explicando qual carro você escolheria e por quê.
+      </p>
+      <p>
+        Cada opinião é bem-vinda &mdash; não existe resposta certa ou errada! O que importa é sua
+        experiência, preferência e o que você valoriza mais em um carro.
+      </p>
+
+      <figure>
+        <img src="contato_carros.jpg" alt="Dois carros lado a lado em uma concessionária ou pista, representando o comparativo Civic vs Lancer Ralliart" width="600">
+        <figcaption>Qual destes você escolheria para chamar de seu?</figcaption>
+      </figure>
+    </section>
+
+    <hr>
+
+    <section id="formulario">
+      <h2>Formulário de Opinião</h2>
+      <p>
+        <strong>Campos com * são obrigatórios.</strong> Após preencher, clique em "Enviar Opinião".
+      </p>
+
+      <form action="mailto:seuemail@exemplo.com" method="post" enctype="text/plain">
+
+        <fieldset>
+          <legend><strong>Seus Dados</strong></legend>
+
+          <p>
+            <label for="nome">Nome completo: *</label><br>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite seu nome completo"
+              size="40"
+              maxlength="100"
+              required
+            >
+          </p>
+
+          <p>
+            <label for="email">E-mail: *</label><br>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="seuemail@exemplo.com"
+              size="40"
+              maxlength="150"
+              required
+            >
+          </p>
+
+          <p>
+            <label for="telefone">Telefone (opcional):</label><br>
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              placeholder="(99) 99999-9999"
+              size="20"
+              maxlength="20"
+            >
+          </p>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+          <legend><strong>Sua Opinião sobre os Carros</strong></legend>
+
+          <p>
+            <label for="carro-favorito">Qual carro você escolheria? *</label><br>
+            <select id="carro-favorito" name="carro-favorito" required>
+              <option value="">-- Selecione sua escolha --</option>
+              <option value="civic">Honda Civic Touring 2017</option>
+              <option value="lancer">Mitsubishi Lancer Ralliart 2.0 Turbo 4x4</option>
+              <option value="empate">Empatou! Os dois são incríveis</option>
+            </select>
+          </p>
+
+          <p>O que você mais valoriza em um carro? (pode marcar mais de um)</p>
+          <p>
+            <input type="checkbox" id="performance" name="preferencia" value="performance">
+            <label for="performance">Performance e velocidade</label><br>
+
+            <input type="checkbox" id="economia" name="preferencia" value="economia">
+            <label for="economia">Economia de combustível</label><br>
+
+            <input type="checkbox" id="conforto" name="preferencia" value="conforto">
+            <label for="conforto">Conforto e tecnologia</label><br>
+
+            <input type="checkbox" id="tracao" name="preferencia" value="tracao">
+            <label for="tracao">Tração e estabilidade</label><br>
+
+            <input type="checkbox" id="design" name="preferencia" value="design">
+            <label for="design">Design e aparência</label><br>
+
+            <input type="checkbox" id="custo" name="preferencia" value="custo">
+            <label for="custo">Custo-benefício e manutenção</label>
+          </p>
+
+          <p>Você já dirigiu algum dos dois modelos?</p>
+          <p>
+            <input type="radio" id="sim-civic" name="dirigiu" value="sim-civic">
+            <label for="sim-civic">Sim, já dirigi o Civic</label><br>
+
+            <input type="radio" id="sim-lancer" name="dirigiu" value="sim-lancer">
+            <label for="sim-lancer">Sim, já dirigi o Lancer Ralliart</label><br>
+
+            <input type="radio" id="sim-ambos" name="dirigiu" value="ambos">
+            <label for="sim-ambos">Já dirigi os dois</label><br>
+
+            <input type="radio" id="nao-dirigiu" name="dirigiu" value="nao">
+            <label for="nao-dirigiu">Não, nunca dirigi nenhum dos dois</label>
+          </p>
+
+          <p>
+            <label for="mensagem">Sua mensagem / opinião detalhada: *</label><br>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="8"
+              cols="60"
+              placeholder="Explique qual carro você escolheria e por quê. Conte sua experiência, curiosidades ou dúvidas sobre os dois modelos..."
+              maxlength="2000"
+              required
+            ></textarea>
+          </p>
+
+          <p>
+            <label for="nota-civic">Nota para o Civic Touring (1 a 10):</label><br>
+            <input type="number" id="nota-civic" name="nota-civic" min="1" max="10" placeholder="Ex: 8">
+          </p>
+
+          <p>
+            <label for="nota-lancer">Nota para o Lancer Ralliart (1 a 10):</label><br>
+            <input type="number" id="nota-lancer" name="nota-lancer" min="1" max="10" placeholder="Ex: 9">
+          </p>
+        </fieldset>
+
+        <br>
+
+        <p>
+          <input type="submit" value="&#128172; Enviar Opinião">
+          &nbsp;&nbsp;
+          <input type="reset" value="&#10006; Limpar Formulário">
+        </p>
+
+      </form>
+    </section>
+
+    <hr>
+
+    <section id="informacoes-contato">
+      <h2>Outras Formas de Contato</h2>
+      <p>
+        Você também pode entrar em contato com os autores deste site pelos canais abaixo:
+      </p>
+      <ul>
+        <li>&#128231; E-mail: <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></li>
+        <li>&#128241; Telefone / WhatsApp: (99) 99999-9999</li>
+        <li>&#127979; Instituição: [Nome da Escola / Faculdade]</li>
+        <li>&#128196; Turma: [Turma e Período]</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section id="links-uteis">
+      <h2>Links Úteis para Mais Informações</h2>
+      <ul>
+        <li>
+          <a href="https://www.honda.com.br" target="_blank" rel="noopener">
+            Site Oficial Honda Brasil
+          </a>
+        </li>
+        <li>
+          <a href="https://www.mitsubishi-motors.com.br" target="_blank" rel="noopener">
+            Site Oficial Mitsubishi Brasil
+          </a>
+        </li>
+        <li>
+          <a href="sobre.html">
+            &#10145; Ver o Comparativo Completo neste site
+          </a>
+        </li>
+        <li>
+          <a href="index.html">
+            &#10145; Voltar para a Home
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <aside>
+    <h3>&#128161; Por que sua opinião importa?</h3>
+    <p>
+      Este comparativo foi criado para ajudar quem está em dúvida entre esses dois modelos.
+      A opinião de quem conhece ou já dirigiu um dos dois carros é extremamente valiosa!
+    </p>
+    <p>
+      O Civic e o Lancer Ralliart atendem perfis completamente diferentes de motoristas.
+      Compartilhar sua experiência pode ajudar outras pessoas a fazerem a escolha certa.
+    </p>
+    <hr>
+    <p><strong>Resumo rápido:</strong></p>
+    <ul>
+      <li>&#9989; <strong>Civic:</strong> Tecnologia, conforto, economia</li>
+      <li>&#128293; <strong>Lancer:</strong> Potência, 4x4, adrenalina</li>
+    </ul>
+    <p><a href="sobre.html">&#10145; Ver a comparação completa</a></p>
+  </aside>
+
+  <footer>
+    <hr>
+    <p><strong>Mini-site HTML &mdash; Atividade Escolar</strong></p>
+    <p>Tema: Honda Civic Touring 2017 vs Mitsubishi Lancer Sportback Ralliart 2.0 Turbo 4x4</p>
+    <p>Integrantes da dupla/trio: <em>[Nome 1]</em> | <em>[Nome 2]</em> | <em>[Nome 3]</em></p>
+    <p>Curso: Informática &mdash; Disciplina: HTML &mdash; Ano: 2025</p>
+    <p><small>Site produzido apenas com HTML puro, sem CSS ou JavaScript, conforme exigido pela atividade.</small></p>
+    <p>
+      <a href="index.html">Home</a> |
+      <a href="sobre.html">Comparativo</a> |
+      <a href="contato.html">Contato</a>
+    </p>
+  </footer>
+
+</body>
+</html>
