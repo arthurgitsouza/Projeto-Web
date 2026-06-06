@@ -1,0 +1,530 @@
+/* ============================================================
+   BATALHA DOS TURBOS — CSS Esportivo Tema Escuro
+   Honda Civic Touring 2017 vs Mitsubishi Lancer Ralliart
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+/* ── Variáveis ─────────────────────────────────────────────── */
+:root {
+  --bg-deep:       #080a0f;
+  --bg-card:       #0d1117;
+  --bg-card2:      #111620;
+  --border:        #1e2633;
+  --border-glow:   #c8001a;
+
+  --red:           #c8001a;
+  --red-light:     #e8001f;
+  --red-glow:      rgba(200, 0, 26, 0.25);
+
+  --silver:        #b0bec5;
+  --silver-light:  #eceff1;
+  --muted:         #4a5568;
+
+  --text:          #e2e8f0;
+  --text-dim:      #8896a8;
+
+  --civic-color:   #3a7bd5;
+  --lancer-color:  #c8001a;
+
+  --font-display:  'Bebas Neue', sans-serif;
+  --font-heading:  'Rajdhani', sans-serif;
+  --font-body:     'Exo 2', sans-serif;
+}
+
+/* ── Reset & Base ───────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+
+  /* Textura sutil de carbono */
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(255,255,255,0.012) 2px,
+      rgba(255,255,255,0.012) 4px
+    );
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
+
+/* ── Links ──────────────────────────────────────────────────── */
+a {
+  color: var(--red-light);
+  text-decoration: none;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px var(--red-light);
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+header {
+  position: relative;
+  text-align: center;
+  padding: 64px 24px 48px;
+  overflow: hidden;
+
+  background:
+    linear-gradient(160deg, #0d0012 0%, #0a0008 40%, #080a0f 100%);
+
+  border-bottom: 2px solid var(--border-glow);
+}
+
+/* Linha decorativa diagonal atrás do header */
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(105deg, var(--red-glow) 0%, transparent 55%),
+    linear-gradient(260deg, rgba(58, 123, 213, 0.12) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--red), var(--civic-color), transparent);
+}
+
+header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  letter-spacing: 0.06em;
+  line-height: 1;
+  color: #fff;
+  text-shadow:
+    0 0 40px var(--red-glow),
+    0 2px 0 rgba(0,0,0,0.8);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+header p {
+  font-family: var(--font-heading);
+  font-size: clamp(0.9rem, 2.5vw, 1.15rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--silver);
+  text-transform: uppercase;
+  position: relative;
+}
+
+header p em {
+  display: block;
+  margin-top: 8px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.85em;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+}
+
+header strong {
+  color: #fff;
+}
+
+/* ── Nav ─────────────────────────────────────────────────────── */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+nav strong {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  text-transform: uppercase;
+  padding: 0 20px;
+  border-right: 1px solid var(--border);
+}
+
+/* Remove os pipes do HTML — usamos bordas */
+nav a {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 16px 24px;
+  border-right: 1px solid var(--border);
+  transition: all 0.25s;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+
+nav a:hover {
+  color: #fff;
+  background: rgba(200, 0, 26, 0.06);
+  text-shadow: none;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Esconde os "|" literais do HTML */
+nav > :not(a):not(strong) {
+  display: none;
+}
+
+/* ── Main ────────────────────────────────────────────────────── */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+/* ── Sections ────────────────────────────────────────────────── */
+section {
+  position: relative;
+}
+
+section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  letter-spacing: 0.06em;
+  color: #fff;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0;
+  width: 60px; height: 2px;
+  background: var(--red);
+}
+
+section p {
+  color: var(--text-dim);
+  margin-bottom: 12px;
+  font-size: 0.97rem;
+}
+
+section p strong {
+  color: var(--silver-light);
+  font-weight: 600;
+}
+
+/* ── Articles (os dois carros) ───────────────────────────────── */
+article {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 36px;
+  margin-top: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+article::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+}
+
+#civic::before   { background: linear-gradient(90deg, var(--civic-color), transparent); }
+#lancer::before  { background: linear-gradient(90deg, var(--lancer-color), transparent); }
+
+article:hover {
+  border-color: var(--muted);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+}
+
+article h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  letter-spacing: 0.06em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#civic   h3 { color: #7db3f0; }
+#lancer  h3 { color: #f06070; }
+
+/* ── Figuras / Imagens ───────────────────────────────────────── */
+figure {
+  margin: 24px 0;
+  text-align: center;
+}
+
+figure img {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  display: block;
+  margin: 0 auto;
+  filter: brightness(0.9) contrast(1.05) saturate(1.1);
+  transition: filter 0.3s, transform 0.3s;
+}
+
+figure img:hover {
+  filter: brightness(1) contrast(1.1) saturate(1.2);
+  transform: scale(1.01);
+}
+
+figcaption {
+  margin-top: 10px;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ── Listas (fichas técnicas) ────────────────────────────────── */
+article ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px 16px;
+  margin-top: 20px;
+}
+
+article li {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--silver);
+  padding: 10px 14px;
+  background: var(--bg-card2);
+  border-left: 2px solid var(--border);
+  border-radius: 2px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+#civic  li:hover { border-color: var(--civic-color); color: #fff; }
+#lancer li:hover { border-color: var(--lancer-color); color: #fff; }
+
+/* ── HR (separador entre os dois artigos) ────────────────────── */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  margin: 40px 0;
+}
+
+/* ── Seção "o que você vai encontrar" ───────────────────────── */
+#sobre-site ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+#sobre-site li {
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  transition: border-color 0.25s;
+}
+
+#sobre-site li:hover {
+  border-color: var(--red);
+}
+
+#sobre-site li strong {
+  color: var(--silver-light);
+}
+
+/* ── Aside ───────────────────────────────────────────────────── */
+aside {
+  max-width: 1000px;
+  margin: 0 auto 48px;
+  padding: 28px 32px;
+  background: var(--bg-card2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--red);
+  border-radius: 4px;
+  font-size: 0.92rem;
+  color: var(--text-dim);
+}
+
+aside h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--silver-light);
+  margin-bottom: 12px;
+}
+
+aside hr {
+  margin: 16px 0;
+}
+
+aside strong {
+  color: var(--silver-light);
+}
+
+aside a {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* ── Footer ──────────────────────────────────────────────────── */
+footer {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 36px 24px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.06em;
+}
+
+footer hr {
+  display: none; /* já temos o border-top */
+}
+
+footer p {
+  margin-bottom: 6px;
+}
+
+footer strong {
+  color: var(--silver);
+}
+
+footer em {
+  color: var(--text-dim);
+  font-style: normal;
+}
+
+footer small {
+  color: var(--muted);
+  font-size: 0.78em;
+}
+
+footer a {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 0 4px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+footer a:hover {
+  color: var(--red-light);
+}
+
+/* ── Animação de entrada ─────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+header, nav, main > section, aside {
+  animation: fadeUp 0.6s ease both;
+}
+
+main > section:nth-child(1) { animation-delay: 0.1s; }
+main > section:nth-child(2) { animation-delay: 0.2s; }
+main > section:nth-child(3) { animation-delay: 0.3s; }
+aside                        { animation-delay: 0.35s; }
+
+/* ── Responsivo ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    position: static;
+  }
+
+  nav strong {
+    width: 100%;
+    text-align: center;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 12px;
+  }
+
+  nav a {
+    flex: 1;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 12px 8px;
+  }
+
+  article {
+    padding: 24px 18px;
+  }
+
+  article ul {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding: 32px 16px;
+  }
+
+  aside {
+    margin: 0 16px 40px;
+  }
+}
